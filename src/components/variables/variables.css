@@ -1,0 +1,14 @@
+
+:root {
+    --font-roboto: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --color-50: #d63d00;
+    --color-50-dark: #820000;
+    --color-grey-100: #0d0d0d;
+    --color-grey-80: #4b4b4b;
+    --color-grey-60: #707070;
+    --color-grey-40: #afafaf;
+    --color-grey-20: #dcdcdc;
+    --color-inverse: #fff;
+    --color-background: #fcfdff;
+    --color-buttons: #000;
+}

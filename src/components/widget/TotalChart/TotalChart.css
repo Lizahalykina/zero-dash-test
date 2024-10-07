@@ -1,0 +1,179 @@
+.totalChart-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.fuel-background {
+    background: linear-gradient(#d63d00, #820000);
+}
+
+.water-background {
+    background: linear-gradient(#00BCD6, #074095);
+}
+
+.totalChart-content {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.totalChart-title {
+    color: #ffffff;
+    margin: 0 20px;
+    text-align: right;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.totalChart-value {
+    color: #ffffff;
+    font-size: 48px;
+    margin: 0 20px;
+    line-height: 48px;
+    text-align: right;
+    z-index: 2;
+}
+
+.totalChart-Wrapper {
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    height: 140%;
+    position: relative;
+}
+
+.totalChart-circle {
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: 5%;
+    height: 70%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.totalChart-circle .liquid {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    transition: 0.5s;
+}
+
+.totalChart-circle .liquid::before,
+.totalChart-circle .liquid::after {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 40%;
+}
+
+.totalChart-circle .liquid::before {
+    animation: liquidMove 5s linear infinite;
+}
+
+.totalChart-circle .liquid::after {
+    animation: liquidMove 10s linear infinite;
+}
+
+@keyframes liquidMove {
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+
+.fuel-circle .liquid {
+    background: linear-gradient(315deg, #820000, #d63d00, #f8e719, #d63d00);
+}
+
+.fuel-circle .liquid::before {
+    background: rgba(130, 0, 0, 0.1);
+}
+
+.fuel-circle .liquid::after {
+    background: rgba(214, 61, 0, 0.3);
+}
+
+.water-circle .liquid {
+    background: linear-gradient(315deg, #074095, #00BCD6, #7EE0FF, #00BCD6);
+}
+
+.water-circle .liquid::before {
+    background: rgba(7, 64, 149, 0.1);
+}
+
+.water-circle .liquid::after {
+    background: rgba(0, 188, 214, 0.3);
+}
+
+
+.totalChart-toggle-wrapper {
+    position: absolute;
+    bottom: 10%;
+    width: 80%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.totalChart-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.totalChart-toggle-container {
+    isolation: isolate;
+    position: relative;
+    height: 20px;
+    width: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--color-background);
+}
+
+.totalChart-toggle-input {
+    display: none;
+}
+
+.totalChart-toggle-indicator {
+    height: 100%;
+    width: 200%;
+    background-color: #d63d00;
+    border-radius: 15px;
+    transform: translate3d(-75%, 0, 0);
+    transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+    box-shadow: -3px -2px 3px 0.1px var(--color-inverse),
+            3px 2px 5px 0.1px var(--color-grey-20);
+}
+
+.totalChart-toggle-input:checked+.totalChart-toggle-container .totalChart-toggle-indicator {
+    background-color: #00bcd6;
+    transform: translate3d(25%, 0, 0);
+}
+
+.totalChart-toggle-text {
+    margin: 0 10px;
+    color: #ffffff;
+}

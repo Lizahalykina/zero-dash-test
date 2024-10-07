@@ -1,0 +1,83 @@
+.toggle-switch {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.toggle-switch__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.toggle-switch__radio-group {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    background-color: var(--color-background);
+    border-radius: 24px;
+    box-shadow: inset 2px 2px 5px var(--color-grey-20),
+            inset -2px -2px 5px var(--color-background);
+    
+    
+    
+}
+
+.toggle-switch__label {
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: calc(100% / 3);
+    line-height: 40px;
+    font-size: 12px;
+    color: var(--color-grey-60);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.15s ease-out;
+    
+}
+
+.toggle-switch__input {
+    display: none;
+}
+
+.toggle-switch__input:checked+.toggle-switch__label {
+    color: var(--color-grey-100);
+}
+
+.toggle-switch__input:checked+.toggle-switch__label--run~.toggle-switch__selector {
+    transform: translateX(0%);
+}
+
+.toggle-switch__input:checked+.toggle-switch__label--experiment~.toggle-switch__selector {
+    transform: translateX(100%);
+}
+
+.toggle-switch__input:checked+.toggle-switch__label--month~.toggle-switch__selector {
+    transform: translateX(200%);
+}
+
+.toggle-switch__selector {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: calc(100% / 3);
+    height: 40px;
+    border-radius: 24px;
+    background-color: var(--color-grey-20);
+    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow: 5px 5px 5px #dedede,
+            0px 0px -1px #e2e2e2;
+}
+
+.toggle-switch__input:checked+.toggle-switch__label--experiment~.toggle-switch__selector {
+    transform: translateX(60%);
+    width: calc(100% / 2 - 5%);
+}

@@ -1,0 +1,13 @@
+.experiment-picker {
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 2px;
+}
+
+.rs-picker-toggle {
+    border-radius: 30px !important;
+    box-shadow: inset 2px 2px 5px var(--color-grey-20),
+            inset -2px -2px 5px var(--color-background);
+    font-weight: 500;
+    padding: 2px;
+}

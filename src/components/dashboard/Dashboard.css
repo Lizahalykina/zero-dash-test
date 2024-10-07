@@ -1,0 +1,32 @@
+.Dashboard {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    background-color: var(--color-background);
+    border-radius: 40px;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.DashboardFilters {
+    width: 20%;
+    display: flex;
+    padding: 70px 30px 70px 30px;
+    background-color: var(--color-background);
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DashboardMetrics {
+    width: 80%;
+    padding: 70px 30px 70px 30px;
+    display: flex;
+    background-color: #eeeeee;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--color-grey-20) 10px 10px 10px -12px inset, var(--color-grey-20) 0px 8px 10px -8px inset;
+}

@@ -1,0 +1,75 @@
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.table-container h3 {
+    width: 90%;
+    margin: 0 10%;
+    text-align: start;
+}
+
+.table {
+    width: 90%;
+    height: 90%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border-bottom: 2px solid var(--color-grey-40);
+    padding: 1%;
+    text-align: left;
+}
+
+.table tbody tr td {
+    border-bottom: 1px solid var(--color-grey-20);
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.page-link {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 24px;
+    color: var(--color-grey-60);
+}
+
+.page-link:hover {
+    background-color: var(--color-background);
+    color: var(--color-50);
+}
+
+.page-link img {
+    width: 12px;
+    height: 12px;
+}
+
+.previous-arrow {
+    transform: rotate(180deg);
+    
+}
+
+.active .page-link {
+    background-color: var(--color-grey-20);
+    color: var(--color-grey-100);
+    font-weight: 800;
+    border-color: var(--color-grey-20);
+    box-shadow: -3px -2px 3px 0.1px var(--color-inverse),
+            3px 2px 5px 0.1px var(--color-grey-20),
+            2px 2px 2px 0.1px var(--color-grey-20) inset,
+            -2px -2px 2px 0.1px var(--color-inverse) inset;
+}
